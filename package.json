@@ -1,0 +1,12 @@
+{
+  "name": "cmn-capstone-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Chris Nickel <chris.nickel.dev@gmail.com> (https://github.com/korzair74)",
+  "license": "ISC"
+}
