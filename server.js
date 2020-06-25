@@ -9,6 +9,7 @@ const PORT = process.env.PORT || 8080;
 const tamingStatsRouter = require("./routes/tamingStats");
 const breedingStatsRouter = require("./routes/breedingStats");
 const arkdataRouter = require("./routes/arkdata");
+const cors = require("cors");
 
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
@@ -18,7 +19,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 mongoose.connection.on("connected", () => {
   console.log("Mongoose is connected!!!!");
 });
-
+app.use(cors());
 app.use("/tamingStats", tamingStatsRouter);
 app.use("/breedingStats", breedingStatsRouter);
 app.use("/arkdata", arkdataRouter);
